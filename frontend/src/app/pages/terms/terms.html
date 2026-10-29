@@ -1,123 +1,308 @@
 <div class="mx-auto max-w-3xl py-2 md:py-4">
   <p class="text-xs font-medium uppercase tracking-[0.2em] text-steam-primary">Legal</p>
   <h1 class="mt-3 text-3xl font-semibold text-white">Terms and Conditions</h1>
-  <p class="mt-3 text-sm text-slate-400">Last updated: August 13, 2026</p>
+  <p class="mt-3 text-sm text-slate-400">Last updated: October 29, 2026</p>
 
   <article class="ss-panel mt-8 space-y-6 text-sm leading-relaxed text-slate-300 sm:p-8">
-    <section>
-      <h2 class="text-lg font-semibold text-white">Agreement</h2>
+    <section id="agreement">
+      <h2 class="text-lg font-semibold text-white">1. Agreement to these Terms</h2>
       <p class="mt-2">
-        By accessing or using Steam Stats, you agree to these Terms and Conditions. If you do not
-        agree, do not use the service.
+        These Terms and Conditions (“Terms”) are a binding agreement between you and the operator of
+        this Steam Stats instance (“Steam Stats”, “we”, “us”, or “our”). By accessing or using Steam
+        Stats, you agree to these Terms and to our
+        <a routerLink="/privacy" class="ss-link underline-offset-2">Privacy Policy</a>, which
+        explains how information is handled. If you do not agree, do not use the service.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">What Steam Stats is</h2>
-      <p class="mt-2">
-        Steam Stats is an open-source companion dashboard for exploring Steam profile and library
-        information such as owned games, playtime statistics, recently played games, and related
-        metadata. Features may vary by deployment.
-      </p>
-    </section>
-
-    <section>
-      <h2 class="text-lg font-semibold text-white">Steam data and third-party services</h2>
+    <section id="eligibility">
+      <h2 class="text-lg font-semibold text-white">2. Eligibility and age requirements</h2>
       <ul class="mt-2 list-disc space-y-2 pl-5">
         <li>
-          Steam Stats retrieves data from Steam APIs through a backend proxy. Availability and
-          accuracy depend on Steam’s services and privacy settings for the looked-up profile.
+          Steam Stats is a general-audience service and is
+          <span class="font-medium text-slate-100">not directed to children under 13</span>. You
+          must be at least 13 years old to use it.
         </li>
         <li>
-          Steam Stats is an unofficial fan project and is not affiliated with, endorsed by, or
-          sponsored by Valve Corporation.
+          If you live in a country or region that sets a higher minimum age for using online
+          services without parental consent (for example, up to 16 in some parts of the European
+          Union), you must meet that age or have permission from a parent or legal guardian.
         </li>
         <li>
-          You are responsible for complying with Steam’s terms and applicable law when using the
-          service.
+          If you are under the age of majority where you live, you may only use Steam Stats with the
+          involvement of a parent or legal guardian who agrees to these Terms on your behalf.
+        </li>
+        <li>
+          If we learn that someone under 13 is using the service, we will take the steps described
+          in the “Children’s privacy” section of our
+          <a routerLink="/privacy" class="ss-link underline-offset-2">Privacy Policy</a>, consistent
+          with the U.S. Children’s Online Privacy Protection Act (COPPA) and similar laws.
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Acceptable use</h2>
+    <section id="service">
+      <h2 class="text-lg font-semibold text-white">3. What Steam Stats is</h2>
       <p class="mt-2">
-        You agree not to misuse Steam Stats, including by attempting unauthorized access, abusing
-        rate limits, overloading infrastructure, scraping excessively, or using the service to
-        harass others or violate law.
+        Steam Stats is an open-source companion dashboard for exploring public Steam profile and
+        library information such as owned games, playtime statistics, recently played games, and
+        related store metadata. It is provided free of charge. Features may vary by deployment and
+        may change at any time.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">No accounts (currently)</h2>
+    <section id="valve">
+      <h2 class="text-lg font-semibold text-white">4. No affiliation with Valve; trademarks</h2>
       <p class="mt-2">
-        Steam Stats does not currently provide user registration or Steam OpenID authentication.
-        Looking up a Steam profile does not create an account with us.
+        Steam Stats is an unofficial fan project. It is not affiliated with, endorsed by, sponsored
+        by, or approved by Valve Corporation. Steam, the Steam logo, and related marks are
+        trademarks or registered trademarks of Valve Corporation in the United States and other
+        countries. Game titles, artwork, screenshots, descriptions, and other store content are the
+        property of their respective owners and are displayed for identification and informational
+        purposes only.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Open-source software license</h2>
+    <section id="steam-data">
+      <h2 class="text-lg font-semibold text-white">5. Steam data and third-party services</h2>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          Steam Stats retrieves data from the Steam Web API and Steam Store through our backend. Our
+          access to that data is subject to Valve’s own terms, and availability, accuracy, and
+          completeness depend on Steam’s services and on the privacy settings of the profile being
+          looked up.
+        </li>
+        <li>
+          We do not control Steam or any other third-party service and are not responsible for their
+          content, availability, or practices. Links to third-party sites (such as the Steam Store
+          or GitHub) are provided for convenience; your use of those sites is governed by their own
+          terms and policies.
+        </li>
+        <li>
+          Using Steam Stats does not require a Steam account and does not give you any rights in
+          Steam, Valve’s services, or any game. You remain responsible for complying with the Steam
+          Subscriber Agreement and any other terms that apply to your own Steam account.
+        </li>
+      </ul>
+    </section>
+
+    <section id="other-profiles">
+      <h2 class="text-lg font-semibold text-white">6. Looking up other people’s profiles</h2>
       <p class="mt-2">
-        The Steam Stats software itself is distributed under the
+        Steam Stats only shows information that Steam makes publicly available for a profile
+        according to that profile owner’s Steam privacy settings. Even so, you agree to treat other
+        people’s information with respect. You must not use Steam Stats to stalk, harass,
+        intimidate, dox, discriminate against, or otherwise harm any person, or to build profiles of
+        individuals for marketing, surveillance, or any unlawful purpose. Steam users who do not
+        want their data shown can make their Steam profile or game details private in Steam’s
+        privacy settings.
+      </p>
+    </section>
+
+    <section id="acceptable-use">
+      <h2 class="text-lg font-semibold text-white">7. Acceptable use</h2>
+      <p class="mt-2">You agree not to, and not to help anyone else to:</p>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          attempt to gain unauthorized access to the service, its servers, administrative endpoints,
+          or any connected system or account;
+        </li>
+        <li>
+          circumvent, disable, or interfere with rate limits, caching, security features, or other
+          technical restrictions;
+        </li>
+        <li>
+          overload or disrupt the service or its infrastructure, including through denial-of-service
+          attacks, automated flooding, or excessive scraping;
+        </li>
+        <li>
+          use bots, scripts, or other automated means to access the service at a volume beyond what
+          a reasonable individual user would generate, except through the self-hosting options
+          offered by the open-source project;
+        </li>
+        <li>
+          use the service to exhaust, misuse, or violate the terms of the Steam Web API or any other
+          third-party service;
+        </li>
+        <li>upload, inject, or transmit malware or any code designed to cause harm;</li>
+        <li>
+          misrepresent your identity or affiliation, or imply that Steam Stats or Valve endorses you
+          or your product;
+        </li>
+        <li>use the service in violation of any applicable law or regulation.</li>
+      </ul>
+    </section>
+
+    <section id="ip">
+      <h2 class="text-lg font-semibold text-white">
+        8. Intellectual property and open-source license
+      </h2>
+      <p class="mt-2">
+        The Steam Stats source code is distributed under the
         <a
           class="ss-link underline-offset-2"
           href="https://github.com/slurrps-mcgee/SteamStats/blob/main/LICENSE"
           target="_blank"
           rel="noopener noreferrer"
           >MIT License <span class="sr-only">(opens in a new tab)</span></a
-        >. These Terms govern use of a hosted Steam Stats service and do not replace the software
-        license for the source code.
+        >. These Terms govern your use of a hosted Steam Stats service and do not replace or limit
+        your rights under that license for the source code. Third-party content shown in the service
+        (including Steam data, game artwork, and trademarks) is not covered by the MIT License and
+        remains the property of its respective owners.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Disclaimer of warranties</h2>
+    <section id="copyright">
+      <h2 class="text-lg font-semibold text-white">9. Copyright and content complaints</h2>
+      <p class="mt-2">
+        Most content displayed in Steam Stats comes directly from Steam. If you believe content
+        shown in the service infringes your copyright or other rights, please contact us using the
+        details in the Contact section below with a description of the content, where it appears,
+        and the basis of your claim. For content that originates from Steam, you may also need to
+        contact Valve or the relevant publisher, since removing it from Steam removes it from Steam
+        Stats.
+      </p>
+    </section>
+
+    <section id="accounts">
+      <h2 class="text-lg font-semibold text-white">10. No accounts and no fees</h2>
+      <p class="mt-2">
+        Steam Stats does not currently offer user registration, Steam OpenID sign-in, or paid
+        features. Looking up a Steam profile does not create an account with us. If we add accounts
+        or sign-in in the future, we will update these Terms and the Privacy Policy before those
+        features launch.
+      </p>
+    </section>
+
+    <section id="availability">
+      <h2 class="text-lg font-semibold text-white">11. Availability and changes to the service</h2>
+      <p class="mt-2">
+        Steam Stats is a free, best-effort project. We may modify, suspend, or discontinue any part
+        of the service at any time, with or without notice, and without liability to you. We are not
+        obligated to provide support, maintenance, or updates.
+      </p>
+    </section>
+
+    <section id="warranties">
+      <h2 class="text-lg font-semibold text-white">12. Disclaimer of warranties</h2>
       <p class="mt-2">
         Steam Stats is provided “as is” and “as available,” without warranties of any kind, whether
-        express or implied, including merchantability, fitness for a particular purpose, and
-        non-infringement. We do not guarantee uninterrupted or error-free operation, or that Steam
-        data will always be complete or current.
+        express, implied, or statutory, including implied warranties of merchantability, fitness for
+        a particular purpose, title, and non-infringement. We do not warrant that the service will
+        be uninterrupted, secure, or error-free, or that Steam data, statistics, or calculations
+        shown will be accurate, complete, or current. Some jurisdictions do not allow the exclusion
+        of certain warranties, so some of these exclusions may not apply to you.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Limitation of liability</h2>
+    <section id="liability">
+      <h2 class="text-lg font-semibold text-white">13. Limitation of liability</h2>
       <p class="mt-2">
         To the maximum extent permitted by law, the authors, contributors, and operators of Steam
-        Stats are not liable for any indirect, incidental, special, consequential, or punitive
-        damages, or any loss of data, profits, or goodwill, arising from your use of the service.
+        Stats will not be liable for any indirect, incidental, special, consequential, exemplary, or
+        punitive damages, or for any loss of data, profits, revenue, or goodwill, arising out of or
+        related to your use of, or inability to use, the service, even if advised of the possibility
+        of such damages. Because the service is provided free of charge, our total liability for any
+        claim arising out of or related to the service will not exceed USD $50. Nothing in these
+        Terms limits liability that cannot be limited under applicable law, such as liability for
+        fraud or for death or personal injury caused by negligence.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Self-hosted and third-party instances</h2>
+    <section id="indemnity">
+      <h2 class="text-lg font-semibold text-white">14. Indemnification</h2>
       <p class="mt-2">
-        If you use a Steam Stats instance hosted by someone else, that operator may impose
-        additional terms. Operators of each instance are responsible for their own uptime, backups,
-        security, and compliance.
+        To the extent permitted by law, you agree to indemnify and hold harmless the authors,
+        contributors, and operators of Steam Stats from any claims, damages, liabilities, and
+        expenses (including reasonable legal fees) arising from your misuse of the service or your
+        violation of these Terms, applicable law, or the rights of any third party.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Changes</h2>
+    <section id="termination">
+      <h2 class="text-lg font-semibold text-white">15. Suspension and termination</h2>
       <p class="mt-2">
-        We may update these Terms from time to time. The “Last updated” date will change when we do.
-        Continued use after changes constitutes acceptance of the updated Terms.
+        We may restrict, block, or terminate your access to Steam Stats at any time, including by
+        blocking IP addresses or network ranges, if we reasonably believe you have violated these
+        Terms or are harming the service, other users, or third parties. You may stop using the
+        service at any time. Sections that by their nature should survive termination (including
+        sections 8, 12, 13, 14, 17, and 18) will survive.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Contact</h2>
+    <section id="self-hosted">
+      <h2 class="text-lg font-semibold text-white">16. Self-hosted and third-party instances</h2>
       <p class="mt-2">
-        Questions about these Terms can be raised via the
+        Because Steam Stats is open source, anyone can run their own instance. If you use an
+        instance hosted by someone else, that operator is responsible for it and may impose
+        additional or different terms. Operators of each instance are responsible for their own
+        uptime, backups, security, compliance with Valve’s API terms, and compliance with applicable
+        law, including privacy and children’s privacy laws.
+      </p>
+    </section>
+
+    <section id="governing-law">
+      <h2 class="text-lg font-semibold text-white">17. Governing law and disputes</h2>
+      <p class="mt-2">
+        These Terms are governed by the laws of the State of New York, USA, and applicable U.S.
+        federal law, without regard to conflict-of-law rules. Subject to the informal resolution
+        step below, any dispute will be resolved exclusively in the state or federal courts located
+        in New York, and you and we consent to those courts’ jurisdiction. Before filing any formal
+        claim, you agree to first contact us and try to resolve the dispute informally for at least
+        30 days. If you are a consumer, nothing in these Terms takes away mandatory protections you
+        have under the laws of the country where you live, including the right to bring a claim in
+        your local courts where that right cannot be waived.
+      </p>
+    </section>
+
+    <section id="general">
+      <h2 class="text-lg font-semibold text-white">18. General</h2>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          <span class="font-medium text-slate-100">Entire agreement.</span> These Terms and the
+          Privacy Policy are the entire agreement between you and us about the hosted service.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Severability.</span> If any provision is found
+          unenforceable, it will be limited to the minimum extent necessary and the rest of these
+          Terms will remain in effect.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">No waiver.</span> Our failure to enforce any
+          provision is not a waiver of our right to do so later.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Assignment.</span> You may not transfer your
+          rights under these Terms. We may transfer ours, for example if the project changes
+          maintainers.
+        </li>
+      </ul>
+    </section>
+
+    <section id="changes">
+      <h2 class="text-lg font-semibold text-white">19. Changes to these Terms</h2>
+      <p class="mt-2">
+        We may update these Terms from time to time. When we do, we will change the “Last updated”
+        date above, and for material changes we will make reasonable efforts to give notice, such as
+        a notice in the app or in the project repository. Changes apply from the date they are
+        posted. Continued use after changes take effect constitutes acceptance of the updated Terms.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-lg font-semibold text-white">20. Contact</h2>
+      <p class="mt-2">
+        Questions about these Terms, copyright complaints, and dispute notices can be sent to
+        <a class="ss-link underline-offset-2" href="mailto:quantumcodedevs@gmail.com"
+          >quantumcodedevs&#64;gmail.com</a
+        >. General questions and bug reports can also be raised in the
         <a
           class="ss-link underline-offset-2"
           href="https://github.com/slurrps-mcgee/SteamStats"
           target="_blank"
           rel="noopener noreferrer"
           >Steam Stats GitHub repository <span class="sr-only">(opens in a new tab)</span></a
-        >.
+        >. Please do not include personal information in public issues.
       </p>
     </section>
   </article>

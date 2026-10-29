@@ -1,6 +1,6 @@
 {
   "name": "steamstats",
-  "version": "0.3.1",
+  "version": "0.3.4",
   "private": true,
   "description": "SteamStats monorepo - Angular frontend and Fastify backend.",
   "workspaces": [

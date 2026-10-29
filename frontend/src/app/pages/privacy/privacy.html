@@ -1,121 +1,373 @@
 <div class="mx-auto max-w-3xl py-2 md:py-4">
   <p class="text-xs font-medium uppercase tracking-[0.2em] text-steam-primary">Legal</p>
   <h1 class="mt-3 text-3xl font-semibold text-white">Privacy Policy</h1>
-  <p class="mt-3 text-sm text-slate-400">Last updated: September 11, 2026</p>
+  <p class="mt-3 text-sm text-slate-400">Last updated: October 29, 2026</p>
 
   <article class="ss-panel mt-8 space-y-6 text-sm leading-relaxed text-slate-300 sm:p-8">
-    <section>
-      <h2 class="text-lg font-semibold text-white">Overview</h2>
+    <section id="overview">
+      <h2 class="text-lg font-semibold text-white">1. Overview</h2>
       <p class="mt-2">
         Steam Stats (“we”, “us”, or “our”) is an open-source Steam companion dashboard for exploring
         public Steam profile and library data. This Privacy Policy explains what information is
-        handled when you use Steam Stats.
+        handled when you use this Steam Stats instance, why, how long it is kept, and the choices
+        and rights you have. The operator of this instance is the party responsible for (the
+        “controller” of) the information described here.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Information we handle</h2>
+    <section id="summary">
+      <h2 class="text-lg font-semibold text-white">2. The short version</h2>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>No accounts, no sign-in, no names, emails, or passwords.</li>
+        <li>No cookies, no advertising, no analytics or tracking scripts.</li>
+        <li>We do not sell or share personal information, and we do not use it for profiling.</li>
+        <li>
+          We handle the Steam identifier you search for, the public Steam data it returns, and
+          standard technical data (like IP addresses) needed to run and protect the service.
+        </li>
+        <li>Steam Stats is not directed to children under 13.</li>
+      </ul>
+    </section>
+
+    <section id="information">
+      <h2 class="text-lg font-semibold text-white">3. Information we handle</h2>
       <ul class="mt-2 list-disc space-y-2 pl-5">
         <li>
-          <span class="font-medium text-slate-100">Steam identifiers you provide.</span>
-          When you search, you may enter a SteamID64, profile URL, or vanity name. That input is
-          sent to our backend so we can resolve and load Steam profile and library data.
+          <span class="font-medium text-slate-100">Steam identifiers you enter.</span>
+          When you search, you enter a SteamID64, profile URL, or vanity name. That input is sent to
+          our backend so we can resolve it to a SteamID64 and load profile and library data.
         </li>
         <li>
-          <span class="font-medium text-slate-100">Steam profile and library data.</span>
-          Public Steam information returned by the Steam Web API / Store APIs (such as persona name,
-          avatar, owned games, and playtime) is fetched by our backend and shown in the app.
+          <span class="font-medium text-slate-100">Public Steam profile and library data.</span>
+          Information Steam makes available for a profile under that profile’s Steam privacy
+          settings, such as persona name, avatar, profile URL, owned games, playtime, and recently
+          played games, along with public game store details. This is fetched from the Steam Web API
+          and Steam Store by our backend and displayed in the app.
         </li>
         <li>
-          <span class="font-medium text-slate-100">Local session preference.</span>
-          The browser may store the last resolved Steam ID in
-          <code class="rounded bg-white/5 px-1 text-slate-200">localStorage</code>
-          so your session can be restored after a refresh. This value stays on your device unless
-          you clear it in Settings or clear site data.
+          <span class="font-medium text-slate-100">Technical and log data.</span>
+          Like most websites, our servers automatically receive your IP address and basic browser
+          information with each request. The backend logs your IP address, the date and time, the
+          API address requested (which can include a SteamID64), and the response status. This is
+          used for security, rate limiting, and troubleshooting, and is deleted after at most 9
+          days.
         </li>
         <li>
-          <span class="font-medium text-slate-100">Optional local caches.</span>
-          The app may cache some game store details in browser storage for a short period to improve
-          performance.
-        </li>
-        <li>
-          <span class="font-medium text-slate-100">Technical logs.</span>
-          The host running a Steam Stats instance may keep standard server logs (for example
-          timestamps and request metadata) for security and reliability.
+          <span class="font-medium text-slate-100">Data stored in your browser.</span>
+          The app stores a small amount of data in your browser’s
+          <code class="rounded bg-white/5 px-1 text-slate-200">localStorage</code>. See
+          <span class="font-medium text-slate-100">Browser storage and cookies</span> below.
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Accounts</h2>
+    <section id="not-collected">
+      <h2 class="text-lg font-semibold text-white">4. What we do not collect</h2>
       <p class="mt-2">
-        Steam Stats does not currently offer user accounts or Steam OpenID sign-in. Looking up a
-        profile does not create an account with us.
+        We do not ask for or collect your real name, email address, phone number, postal address,
+        date of birth, payment information, government identifiers, precise location, contacts, or
+        Steam password. We do not use cookies, advertising networks, social media pixels, or
+        third-party analytics. Fonts and icons are served from this site, not from third-party font
+        services. We do not use your information for automated decision-making that has legal or
+        similarly significant effects on you.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">How information is used</h2>
+    <section id="use">
+      <h2 class="text-lg font-semibold text-white">5. How information is used</h2>
       <ul class="mt-2 list-disc space-y-2 pl-5">
         <li>
           To resolve Steam identifiers and display profile, library, statistics, and related
-          dashboard features.
+          dashboard features you request.
         </li>
-        <li>To keep a local session so you do not have to re-enter a Steam ID after refreshing.</li>
+        <li>To remember the active profile in your browser so you do not have to re-enter it.</li>
+        <li>To cache responses so the service is fast and stays within Steam API usage limits.</li>
         <li>
-          To operate, secure, and improve the service (including rate limiting and diagnosing
-          errors).
+          To operate, secure, and maintain the service, including rate limiting, preventing abuse,
+          and diagnosing errors.
+        </li>
+        <li>To comply with legal obligations and enforce our Terms.</li>
+      </ul>
+      <p class="mt-2">We do not use information for advertising or sell it to anyone.</p>
+    </section>
+
+    <section id="legal-bases">
+      <h2 class="text-lg font-semibold text-white">6. Legal bases (EEA, UK, and Switzerland)</h2>
+      <p class="mt-2">
+        If the GDPR, UK GDPR, or Swiss data protection law applies to you, we rely on our
+        <span class="font-medium text-slate-100">legitimate interests</span> (Article 6(1)(f)) in
+        providing the dashboard you request, keeping it secure and reliable, and preventing abuse.
+        We have balanced these interests against your rights and limited processing to public Steam
+        data and the minimum technical data needed. Where we must keep or disclose information to
+        meet a legal requirement, we rely on
+        <span class="font-medium text-slate-100">legal obligation</span> (Article 6(1)(c)). You can
+        object to processing based on legitimate interests at any time (see Your rights).
+      </p>
+    </section>
+
+    <section id="storage">
+      <h2 class="text-lg font-semibold text-white">7. Browser storage and cookies</h2>
+      <p class="mt-2">
+        Steam Stats does not set cookies. It uses
+        <code class="rounded bg-white/5 px-1 text-slate-200">localStorage</code> only for the
+        functionality you request. These items are strictly necessary for the features you use, stay
+        on your device, and are not used for tracking:
+      </p>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full min-w-[32rem] border-collapse text-left">
+          <thead>
+            <tr class="border-b border-white/10 text-slate-100">
+              <th scope="col" class="py-2 pr-4 font-medium">Key</th>
+              <th scope="col" class="py-2 pr-4 font-medium">Purpose</th>
+              <th scope="col" class="py-2 font-medium">Kept until</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-2 pr-4">
+                <code class="rounded bg-white/5 px-1 text-slate-200">steamstats.steamId</code>
+              </td>
+              <td class="py-2 pr-4">Remembers the active SteamID64 between visits.</td>
+              <td class="py-2">You clear it in Settings or clear site data.</td>
+            </tr>
+            <tr class="border-b border-white/5 align-top">
+              <td class="py-2 pr-4">
+                <code class="rounded bg-white/5 px-1 text-slate-200">steamstats.gameDetails</code>
+              </td>
+              <td class="py-2 pr-4">Caches public store details for up to 50 games.</td>
+              <td class="py-2">Entries expire after 2 days.</td>
+            </tr>
+            <tr class="align-top">
+              <td class="py-2 pr-4">
+                <code class="rounded bg-white/5 px-1 text-slate-200">steamstats.catalogHints</code>
+              </td>
+              <td class="py-2 pr-4">
+                Caches public game artwork, genres, and platforms for library views.
+              </td>
+              <td class="py-2">Entries expire after 2 days.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-3">
+        You can remove all of this at any time by clearing site data for this website in your
+        browser. Clearing the active profile in Settings removes the stored SteamID64.
+      </p>
+    </section>
+
+    <section id="retention">
+      <h2 class="text-lg font-semibold text-white">8. Data retention</h2>
+      <p class="mt-2">
+        We keep information only as long as needed for the purposes above. Server-side caches expire
+        automatically:
+      </p>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>Profile summaries: about 15 minutes.</li>
+        <li>Recently played games: about 5 minutes.</li>
+        <li>Owned games and playtime: about 1 hour.</li>
+        <li>Resolved Steam identifiers (vanity name or URL to SteamID64): about 1 day.</li>
+        <li>Public game store details: about 2 days.</li>
+        <li>
+          <span class="font-medium text-slate-100">Server request logs: at most 9 days.</span>
+          Logs are written to one file per day and deleted automatically once they are 9 days old.
+          The only exception is if specific entries are needed to investigate abuse or meet a legal
+          obligation; then we keep only those entries, and only for as long as necessary.
         </li>
       </ul>
-    </section>
-
-    <section>
-      <h2 class="text-lg font-semibold text-white">Steam API and third parties</h2>
       <p class="mt-2">
-        Steam data is retrieved through our backend using Steam’s APIs. Steam’s handling of data is
-        governed by Valve / Steam policies. Steam Stats is not affiliated with Valve Corporation. We
-        do not sell personal data. Fonts and icons used by the dashboard are served from this origin
-        (not from Google Fonts).
+        Cached data may be written to the server’s disk so it survives restarts, but it still
+        expires on the schedule above, and caches may be cleared earlier. The web server does not
+        keep an access log.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Data retention and deletion</h2>
+    <section id="sharing">
+      <h2 class="text-lg font-semibold text-white">9. Sharing and third parties</h2>
       <p class="mt-2">
-        Server-side responses may be cached briefly for performance. You can clear the active Steam
-        profile from Settings, which removes the stored Steam ID from your browser. Clearing browser
-        site data removes local caches as well.
+        We do not sell, rent, or share personal information for advertising. Information is
+        disclosed only as follows:
+      </p>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          <span class="font-medium text-slate-100">Valve / Steam.</span>
+          Our backend sends the Steam identifier you search for to the Steam Web API and Steam Store
+          to retrieve data. Your browser also loads game artwork and avatars directly from Steam’s
+          content delivery networks, which means those servers receive your IP address and standard
+          request data. Valve’s handling of data is governed by its own privacy policy. Steam Stats
+          is not affiliated with Valve Corporation.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Hosting and network providers.</span>
+          This instance may run on third-party hosting and use network, CDN, or security providers
+          (such as Cloudflare) that process technical data like IP addresses on our behalf to
+          deliver and protect the site.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Legal and safety.</span>
+          We may disclose information if required by law, or if we believe in good faith it is
+          necessary to protect the rights, safety, or security of users, the public, or the service.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Project changes.</span>
+          If the project changes maintainers or operators, information we hold may transfer to the
+          new operator, who will remain bound by this policy or notify you of changes.
+        </li>
+      </ul>
+      <p class="mt-2">
+        Links to external sites (such as Steam or GitHub) take you to services with their own
+        privacy practices, which we do not control.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Self-hosted deployments</h2>
+    <section id="looked-up">
+      <h2 class="text-lg font-semibold text-white">10. If your profile is looked up</h2>
       <p class="mt-2">
-        Steam Stats is open source and may be hosted by third parties. If you use a self-hosted or
-        third-party instance, that operator is responsible for how data is stored, secured, and
-        processed on their infrastructure.
+        Anyone can enter a Steam identifier, so Steam Stats may display information about Steam
+        users who have never visited the site. We only show what Steam makes public for that
+        profile, and we do not combine it with other sources. If you do not want your information
+        shown, set your Steam profile or game details to private in Steam’s privacy settings. Once
+        you do, Steam stops returning that data and our cached copy expires on the schedule above.
+        You can also contact us to ask for cached data about your SteamID64 to be removed sooner.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Changes</h2>
+    <section id="children">
+      <h2 class="text-lg font-semibold text-white">11. Children’s privacy (COPPA)</h2>
+      <p class="mt-2">
+        Steam Stats is a general-audience service and is not directed to children under 13. We do
+        not knowingly collect personal information, including persistent identifiers such as IP
+        addresses or Steam IDs, from children under 13, and we do not knowingly allow children under
+        13 to use the service. Steam itself requires users to be at least 13.
+      </p>
+      <p class="mt-2">
+        If we learn that we have collected personal information from a child under 13 without
+        verifiable parental consent, we will delete it as quickly as reasonably possible. If you are
+        a parent or guardian and believe your child has used Steam Stats or that we hold information
+        about your child, contact us and we will delete what we can identify. Parents can also clear
+        the browser data described above and set their child’s Steam profile to private. Where local
+        laws set a higher age for consent to data processing (for example, up to 16 in parts of the
+        EU), users below that age should only use Steam Stats with parental permission.
+      </p>
+    </section>
+
+    <section id="rights">
+      <h2 class="text-lg font-semibold text-white">12. Your rights</h2>
+      <p class="mt-2">Depending on where you live, you may have the right to:</p>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          know what personal information we hold about you and get a copy (access/portability);
+        </li>
+        <li>correct inaccurate information;</li>
+        <li>have your information deleted;</li>
+        <li>object to or restrict certain processing;</li>
+        <li>withdraw consent, where processing is based on consent;</li>
+        <li>not be discriminated against for exercising your rights; and</li>
+        <li>
+          lodge a complaint with your local data protection authority (for example, a supervisory
+          authority in the EEA, the UK Information Commissioner’s Office, or your state attorney
+          general).
+        </li>
+      </ul>
+      <p class="mt-2">
+        Because we have no accounts, we usually cannot link logs to a specific person. To help us
+        find your information, include the SteamID64 or profile you are asking about and, if
+        relevant, the approximate date, time, and IP address of your visit. We may need to verify
+        that a request is genuine (for example, that you control the Steam profile in question)
+        before acting on it, and you may use an authorized agent where the law allows. We aim to
+        respond within one month, or sooner where required by law. Most of your data can also be
+        removed directly by clearing site data in your browser.
+      </p>
+    </section>
+
+    <section id="us-states">
+      <h2 class="text-lg font-semibold text-white">13. California and other U.S. state notices</h2>
+      <p class="mt-2">
+        To the extent the California Consumer Privacy Act (as amended by the CPRA) or similar U.S.
+        state privacy laws apply, in the past 12 months we have collected the following categories
+        of personal information, from you, your browser, and Steam, for the purposes in section 5:
+      </p>
+      <ul class="mt-2 list-disc space-y-2 pl-5">
+        <li>
+          <span class="font-medium text-slate-100">Identifiers:</span> IP address, SteamID64, Steam
+          vanity name or profile URL.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Internet or network activity:</span> request logs
+          and pages or endpoints requested.
+        </li>
+        <li>
+          <span class="font-medium text-slate-100">Public Steam profile information:</span>
+          persona name, avatar, game library, and playtime.
+        </li>
+      </ul>
+      <p class="mt-2">
+        These are disclosed for business purposes only to the service providers described in section
+        9. We do <span class="font-medium text-slate-100">not</span> sell or share personal
+        information for cross-context behavioral advertising, have not done so in the past 12
+        months, and have no actual knowledge of selling or sharing information of consumers under
+        16. We do not collect sensitive personal information. Because we do not sell or share, we
+        treat Global Privacy Control (GPC) and Do Not Track signals as already honored. Retention
+        periods are described in section 8.
+      </p>
+    </section>
+
+    <section id="transfers">
+      <h2 class="text-lg font-semibold text-white">14. International transfers</h2>
+      <p class="mt-2">
+        Steam Stats and its providers, including Valve, may process information in the United States
+        and other countries whose data protection laws may differ from yours. Where required, we
+        rely on appropriate safeguards, such as the providers’ standard contractual clauses or
+        adequacy frameworks, for transfers out of the EEA, UK, or Switzerland.
+      </p>
+    </section>
+
+    <section id="security">
+      <h2 class="text-lg font-semibold text-white">15. Security</h2>
+      <p class="mt-2">
+        We use reasonable technical measures to protect information, including HTTPS, security
+        headers and a content security policy, rate limiting, and keeping the Steam API key on the
+        server. No method of transmission or storage is completely secure, so we cannot guarantee
+        absolute security. If we become aware of a breach affecting personal information, we will
+        notify affected users and authorities where required by law. Please report security issues
+        privately by email (see Contact) rather than in a public issue.
+      </p>
+    </section>
+
+    <section id="self-hosted">
+      <h2 class="text-lg font-semibold text-white">16. Self-hosted deployments</h2>
+      <p class="mt-2">
+        Steam Stats is open source and may be hosted by others. If you use a self-hosted or
+        third-party instance, that operator is the controller of your information and is responsible
+        for how it is stored, secured, logged, and processed, and for their own privacy policy and
+        legal compliance.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2 class="text-lg font-semibold text-white">17. Changes</h2>
       <p class="mt-2">
         We may update this Privacy Policy from time to time. The “Last updated” date will change
-        when we do.
+        when we do. If we make material changes, such as adding accounts, sign-in, analytics, or new
+        types of data collection, we will update this policy before the change takes effect and make
+        reasonable efforts to give notice in the app or the project repository.
       </p>
     </section>
 
-    <section>
-      <h2 class="text-lg font-semibold text-white">Contact</h2>
+    <section id="contact">
+      <h2 class="text-lg font-semibold text-white">18. Contact</h2>
       <p class="mt-2">
-        Questions about this policy can be raised via the
+        Privacy questions, requests to exercise your rights, parental requests about a child’s
+        information, and security reports can be sent to
+        <a class="ss-link underline-offset-2" href="mailto:quantumcodedevs@gmail.com"
+          >quantumcodedevs&#64;gmail.com</a
+        >. General questions can also be raised in the
         <a
           class="ss-link underline-offset-2"
           href="https://github.com/slurrps-mcgee/SteamStats"
           target="_blank"
           rel="noopener noreferrer"
           >Steam Stats GitHub repository <span class="sr-only">(opens in a new tab)</span></a
-        >.
+        >, but please do not post personal information in a public issue.
       </p>
     </section>
   </article>

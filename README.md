@@ -51,6 +51,7 @@ Edit `.env`:
 | `ADMIN_API_KEY`        | Shared secret for `X-Admin-Key` on cache-clear / library-refresh |
 | `RATE_LIMIT_MAX`       | Max requests per window                                          |
 | `RATE_LIMIT_WINDOW_MS` | Rate-limit window                                                |
+| `LOG_DIR`              | Daily request-log files, deleted after 9 days (unset = stdout)   |
 
 Set `FRONTEND_ORIGIN` to the origin you actually open in the browser:
 

@@ -20,6 +20,8 @@ export interface AppConfig {
   steamApiKey: string;
   frontendOrigin: string;
   adminApiKey?: string;
+  /** When set, logs go to daily-rotated files here instead of stdout. */
+  logDir?: string;
   rateLimit: {
     max: number;
     timeWindowMs: number;
@@ -49,6 +51,7 @@ export function loadConfig(): AppConfig {
     steamApiKey: requireEnv('STEAM_API_KEY'),
     frontendOrigin: optionalEnv('FRONTEND_ORIGIN', 'http://localhost:4200'),
     adminApiKey: optionalEnv('ADMIN_API_KEY', '') || undefined,
+    logDir: optionalEnv('LOG_DIR', '') || undefined,
     rateLimit: {
       max: Number(optionalEnv('RATE_LIMIT_MAX', '30')),
       timeWindowMs: Number(optionalEnv('RATE_LIMIT_WINDOW_MS', '60000')),

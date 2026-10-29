@@ -14,6 +14,7 @@ describe('loadConfig', () => {
     delete process.env.PORT;
     delete process.env.FRONTEND_ORIGIN;
     delete process.env.ADMIN_API_KEY;
+    delete process.env.LOG_DIR;
     delete process.env.RATE_LIMIT_MAX;
     delete process.env.RATE_LIMIT_WINDOW_MS;
     process.env.NODE_ENV = 'test';
@@ -32,6 +33,15 @@ describe('loadConfig', () => {
       },
     });
     expect(config.adminApiKey).toBeUndefined();
+    expect(config.logDir).toBeUndefined();
+  });
+
+  it('loads LOG_DIR when set', () => {
+    process.env.STEAM_API_KEY = 'secret-key';
+    process.env.LOG_DIR = '/app/logs';
+    process.env.NODE_ENV = 'test';
+
+    expect(loadConfig().logDir).toBe('/app/logs');
   });
 
   it('loads ADMIN_API_KEY when set', () => {

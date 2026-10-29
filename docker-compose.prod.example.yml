@@ -10,6 +10,16 @@ services:
       - ./.env
     environment:
       HOST: "0.0.0.0"
+    volumes:
+      # Daily request logs, pruned automatically after 9 days.
+      - backend-logs:/app/logs
+    logging: &capped-logging
+      # Request logs go to files (above); stdout only carries startup and crash
+      # output. Cap it so container logs cannot grow without bound.
+      driver: local
+      options:
+        max-size: "5m"
+        max-file: "2"
     expose:
       - "3000"
     # Intentionally no `ports:` mapping - the backend must only be reachable
@@ -42,9 +52,13 @@ services:
     depends_on:
       backend:
         condition: service_healthy
+    logging: *capped-logging
     networks:
       - steamstats-net
     restart: unless-stopped
+
+volumes:
+  backend-logs:
 
 networks:
   steamstats-net:
