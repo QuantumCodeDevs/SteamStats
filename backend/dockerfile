@@ -24,7 +24,9 @@ RUN npm ci --omit=dev --workspace=backend && npm cache clean --force
 
 COPY --from=build /app/backend/dist ./dist
 
-RUN addgroup -S app && adduser -S app -G app
+# Request logs are written here as daily files and kept for at most 9 days.
+ENV LOG_DIR=/app/logs
+RUN addgroup -S app && adduser -S app -G app && mkdir -p /app/logs && chown app:app /app/logs
 USER app
 
 EXPOSE 3000

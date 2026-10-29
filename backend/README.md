@@ -115,6 +115,7 @@ Loaded from the repo-root `.env` (see [`.env.example`](../.env.example)):
 | `FRONTEND_ORIGIN` | CORS allowlist |
 | `ADMIN_API_KEY` | `X-Admin-Key` for `/cache/clear` and `/library/refresh` (404 in production if unset) |
 | `RATE_LIMIT_MAX` / `RATE_LIMIT_WINDOW_MS` | Global rate limit |
+| `LOG_DIR` | Daily-rotated request logs, pruned after 9 days (unset logs to stdout; the production image sets `/app/logs`) |
 
 Store `appdetails` does not use the Web API key.
 

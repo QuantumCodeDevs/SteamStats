@@ -56,7 +56,7 @@ export const routes: Routes = [
     title: 'Privacy Policy',
     data: {
       description:
-        'How Steam Stats handles Steam identifiers, public profile data, and local session storage.',
+        'How Steam Stats handles Steam identifiers, public profile data, logs, and browser storage, including children’s privacy and your rights.',
     },
     loadComponent: () => import('./pages/privacy/privacy').then((m) => m.Privacy),
   },
@@ -65,7 +65,7 @@ export const routes: Routes = [
     title: 'Terms and Conditions',
     data: {
       description:
-        'Terms for using Steam Stats, including Steam API usage and the open-source license.',
+        'Terms for using Steam Stats, including age requirements, acceptable use, Steam API usage, and the open-source license.',
     },
     loadComponent: () => import('./pages/terms/terms').then((m) => m.Terms),
   },

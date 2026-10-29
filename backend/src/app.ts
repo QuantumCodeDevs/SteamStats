@@ -1,4 +1,9 @@
-import Fastify, { type FastifyInstance, type FastifyError } from 'fastify';
+import Fastify, {
+  type FastifyInstance,
+  type FastifyError,
+  type FastifyServerOptions,
+} from 'fastify';
+import { join } from 'node:path';
 import { TypeBoxValidatorCompiler, type TypeBoxTypeProvider } from '@fastify/type-provider-typebox';
 import sensible from '@fastify/sensible';
 import type { AppConfig } from './config/env';
@@ -12,22 +17,47 @@ import { SteamNotFoundError } from './types/error.types';
 import cachePlugin from './plugins/cache.plugin';
 import swaggerPlugin from './plugins/swagger.plugin';
 import helmetPlugin from './plugins/helmet.plugin';
+import logRetentionPlugin from './plugins/log-retention.plugin';
+import { LOG_RETENTION_DAYS } from './utils/log-retention.util';
+
+function buildLoggerOptions(config: AppConfig): FastifyServerOptions['logger'] {
+  if (config.nodeEnv === 'test') {
+    return false;
+  }
+
+  const level = config.nodeEnv === 'production' ? 'info' : 'debug';
+  if (!config.logDir) {
+    return { level };
+  }
+
+  // One file per day; keep the active file plus LOG_RETENTION_DAYS - 1 rotated ones.
+  // log-retention.plugin also prunes by age in case the process was down.
+  return {
+    level,
+    transport: {
+      target: 'pino-roll',
+      options: {
+        file: join(config.logDir, 'backend'),
+        frequency: 'daily',
+        dateFormat: 'yyyy-MM-dd',
+        mkdir: true,
+        limit: { count: LOG_RETENTION_DAYS - 1, removeOtherLogFiles: true },
+      },
+    },
+  };
+}
 
 /** Builds (but does not start) a fully configured Fastify instance. */
 export function buildApp(config: AppConfig): FastifyInstance {
   const fastify = Fastify({
     trustProxy: true,
-    logger:
-      config.nodeEnv === 'test'
-        ? false
-        : {
-            level: config.nodeEnv === 'production' ? 'info' : 'debug',
-          },
+    logger: buildLoggerOptions(config),
   })
     .setValidatorCompiler(TypeBoxValidatorCompiler)
     .withTypeProvider<TypeBoxTypeProvider>();
 
   fastify.register(configPlugin(config));
+  fastify.register(logRetentionPlugin);
   fastify.register(helmetPlugin);
   fastify.register(sensible);
   fastify.register(corsPlugin);

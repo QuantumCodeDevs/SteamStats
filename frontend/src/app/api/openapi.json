@@ -329,46 +329,40 @@
                           "type": "number"
                         },
                         "mostPlayedGame": {
-                          "anyOf": [
-                            {
-                              "type": "object",
-                              "required": [
-                                "appId",
-                                "name",
-                                "playtimeForeverMinutes",
-                                "playtimeRecentMinutes",
-                                "iconUrl",
-                                "headerUrl"
-                              ],
-                              "properties": {
-                                "appId": {
-                                  "type": "number"
-                                },
-                                "name": {
-                                  "type": "string"
-                                },
-                                "playtimeForeverMinutes": {
-                                  "type": "number"
-                                },
-                                "playtimeRecentMinutes": {
-                                  "type": "number"
-                                },
-                                "iconUrl": {
-                                  "type": "string"
-                                },
-                                "headerUrl": {
-                                  "type": "string"
-                                },
-                                "lastPlayedAt": {
-                                  "type": "number"
-                                }
-                              },
-                              "additionalProperties": false
+                          "type": "object",
+                          "required": [
+                            "appId",
+                            "name",
+                            "playtimeForeverMinutes",
+                            "playtimeRecentMinutes",
+                            "iconUrl",
+                            "headerUrl"
+                          ],
+                          "properties": {
+                            "appId": {
+                              "type": "number"
                             },
-                            {
-                              "type": "null"
+                            "name": {
+                              "type": "string"
+                            },
+                            "playtimeForeverMinutes": {
+                              "type": "number"
+                            },
+                            "playtimeRecentMinutes": {
+                              "type": "number"
+                            },
+                            "iconUrl": {
+                              "type": "string"
+                            },
+                            "headerUrl": {
+                              "type": "string"
+                            },
+                            "lastPlayedAt": {
+                              "type": "number"
                             }
-                          ]
+                          },
+                          "additionalProperties": false,
+                          "nullable": true
                         },
                         "recentlyPlayedCount": {
                           "type": "number"
@@ -914,14 +908,8 @@
                       "additionalProperties": false
                     },
                     "website": {
-                      "anyOf": [
-                        {
-                          "type": "string"
-                        },
-                        {
-                          "type": "null"
-                        }
-                      ]
+                      "type": "string",
+                      "nullable": true
                     }
                   },
                   "additionalProperties": false
