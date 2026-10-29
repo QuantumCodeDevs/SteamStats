@@ -33,7 +33,7 @@ export function getLibrary(http: HttpClient, rootUrl: string, params: GetLibrary
 'iconUrl': string;
 'headerUrl': string;
 'lastPlayedAt'?: number;
-} | null);
+}) | null;
 'recentlyPlayedCount': number;
 };
 }>> {
@@ -68,7 +68,7 @@ export function getLibrary(http: HttpClient, rootUrl: string, params: GetLibrary
       'iconUrl': string;
       'headerUrl': string;
       'lastPlayedAt'?: number;
-      } | null);
+      }) | null;
       'recentlyPlayedCount': number;
       };
       }>;

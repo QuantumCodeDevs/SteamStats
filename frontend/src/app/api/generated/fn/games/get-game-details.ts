@@ -74,7 +74,7 @@ export function getGameDetails(http: HttpClient, rootUrl: string, params: GetGam
 'minimum'?: string;
 'recommended'?: string;
 };
-'website'?: (string | null);
+'website'?: string | null;
 }>> {
   const rb = new RequestBuilder(rootUrl, getGameDetails.PATH, 'get');
   if (params) {
@@ -148,7 +148,7 @@ export function getGameDetails(http: HttpClient, rootUrl: string, params: GetGam
       'minimum'?: string;
       'recommended'?: string;
       };
-      'website'?: (string | null);
+      'website'?: string | null;
       }>;
     })
   );
